@@ -17,10 +17,11 @@ app.use(express.urlencoded({ extended: true })); // Handles form submissions
 
 // Configure CORS: Allow specific origin, methods, and headers
 app.use(cors({
-  origin: ['http://localhost:5173','*'], // Allow requests from your frontend
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Allow these HTTP methods
-  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization'], // Allow these headers including Authorization
+  origin: ['http://localhost:5173', 'http://88.222.213.217:4001', '*'], // Allow requests from both frontend origins
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization'],
 }));
+
 
 
 // Logging middleware to log incoming requests
